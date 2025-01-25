@@ -6,85 +6,7 @@
     <title>Vistara - Register</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Dancing+Script&display=swap" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #fde2e4, #f9c5d1); /* Pinkish-white gradient */
-            font-family: 'Quicksand', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        h1 {
-            font-family: 'Dancing Script', cursive;
-            color: #ff66b2; /* Soft pink text */
-            text-align: center;
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-family: 'Quicksand', sans-serif;
-            color: #ff66b2;
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        form {
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            padding: 30px 40px;
-            text-align: center;
-            width: 100%;
-            max-width: 400px;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px 15px;
-            margin: 15px 0;
-            border: 1px solid #ffb3c6; /* Light pink border */
-            border-radius: 8px;
-            font-size: 16px;
-            font-family: 'Quicksand', sans-serif;
-        }
-
-        button {
-            background-color: #ff66b2;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 12px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            width: 100%;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #ff3385;
-        }
-
-        p {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #ff66b2;
-        }
-
-        a {
-            color: #ff3385;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
+        /* Styles omitted for brevity, keep your existing styles */
     </style>
 </head>
 <body>
@@ -92,13 +14,43 @@
         <h1>Vistara</h1>
         <h2>Register</h2>
         
-        <form method="POST">
-            <input type="text" name="username" placeholder="Choose a username" required>
-            <input type="password" name="password" placeholder="Choose a password" required>
-            <button type="submit">Register</button>
+        <form id="register-form">
+            <input type="text" id="reg-username" name="username" placeholder="Choose a username" required>
+            <input type="password" id="reg-password" name="password" placeholder="Choose a password" required>
+            <button type="button" onclick="registerUser()">Register</button>
         </form>
         
         <p>Already have an account? <a href="login.html">Login here</a></p>
     </div>
+
+    <script>
+        function registerUser() {
+            const username = document.getElementById('reg-username').value;
+            const password = document.getElementById('reg-password').value;
+
+            // Check if username or password is empty
+            if (!username || !password) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Load existing users from localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Check if username already exists
+            const userExists = users.find(user => user.username === username);
+            if (userExists) {
+                alert("Username already exists. Please choose another.");
+                return;
+            }
+
+            // Add new user to the list
+            users.push({ username, password });
+            localStorage.setItem('users', JSON.stringify(users));
+
+            alert("Registration successful! You can now log in.");
+            window.location.href = "login.html";
+        }
+    </script>
 </body>
 </html>
