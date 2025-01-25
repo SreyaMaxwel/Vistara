@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vistara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('vist ht.png'); /* Ensure the image is in the same directory */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        h1 {
+            font-family: 'Brush Script MT', cursive;
+            color: rgb(209, 137, 149);
+            text-align: center;
+            margin: 20px 0 0;
+            font-size: 75px;
+            font-weight: 300;
+        }
+
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            color: rgb(186, 132, 141);
+            text-align: center;
+            margin: 10px 0 20px;
+            font-size: 25px;
+            font-weight: 300;
+        }
+
+        .box-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 80%; /* Taking 80% of screen height for the boxes */
+            margin: 0 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex: 1;
+            gap: 30px; /* Increased gap for parallel spacing between boxes */
+        }
+
+        .box {
+            flex: 1;
+            background-color: #f8f8f8; /* Off-white background for the box */
+            border: 2px solid #ffb3c6; /* Pinkish border */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px; /* Slightly larger font size */
+            font-weight: bold;
+            color: #ff66b2; /* Pinkish text color */
+            font-family: 'Pacifico', cursive; /* Slight cursive font for content */
+            padding: 10px;
+            margin: 0 15px; /* Parallel spacing between boxes */
+        }
+
+        .box:hover {
+            background-color: #ffb3c6; /* Light pink background on hover */
+            border-color: #ff66b2; /* Darker pink border */
+        }
+
+        .box:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <h1>Vistara</h1>
+    <h2>GIVE HER WINGS, WATCH HER RISE!</h2>
+
+    <div class="box-container">
+        <!-- Top row of boxes -->
+        <div class="row">
+            <div class="box" onclick="window.location.href='page1.html';">
+                <p>Job Opportunities</p>
+            </div>
+            <div class="box" onclick="window.location.href='page2.html';">
+                <p>Skill Development</p>
+            </div>
+            <div class="box" onclick="window.location.href='page3.html';">
+                <p>Mentorship</p>
+            </div>
+        </div>
+
+        <!-- Bottom row of boxes -->
+        <div class="row">
+            <div class="box" onclick="window.location.href='page4.html';">
+                <p>Resources</p>
+            </div>
+            <div class="box" onclick="window.location.href='page5.html';">
+                <p>Community</p>
+            </div>
+            <div class="box" onclick="window.location.href='page6.html';">
+                <p>Empowerment Challenges</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
