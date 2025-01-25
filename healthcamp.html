@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vistara - Find Health Camps</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFF0F5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #FF69B4;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn {
+            display: inline-block;
+            background-color: #FF1493;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 10px 0;
+        }
+        .btn:hover {
+            background-color: #C71585;
+        }
+        .search-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .search-form select {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #FF69B4;
+            border-radius: 5px;
+        }
+        .health-camp {
+            border: 1px solid #FF69B4;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .health-camp h3 {
+            color: #FF1493;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Find Health Camps Near You</h1>
+        </header>
+
+        <div class="section">
+            <h2>Search Health Camps</h2>
+            <form class="search-form">
+                <select id="state" required>
+                    <option value="">Select State</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chhattisgarh</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                </select>
+                <select id="district" required disabled>
+                    <option value="">Select District</option>
+                </select>
+                <select id="camp-type">
+                    <option value="">Health Camp Type</option>
+                    <option>Women's Health</option>
+                    <option>General Health Check-up</option>
+                    <option>Gynecological Screening</option>
+                    <option>Reproductive Health</option>
+                </select>
+                <button type="submit" class="btn">Find Health Camps</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Upcoming Health Camps</h2>
+            <div class="health-camp">
+                <h3>Women's Health Screening</h3>
+                <p><strong>Date:</strong> 15 February 2024</p>
+                <p><strong>Location:</strong> Community Health Center, Andheri West, Mumbai</p>
+                <p><strong>Services:</strong> Free gynecological check-up, mammography</p>
+                <p><strong>Contact:</strong> +91 8976543210</p>
+                <a href="#" class="btn">Register Now</a>
+            </div>
+            <div class="health-camp">
+                <h3>Reproductive Health Camp</h3>
+                <p><strong>Date:</strong> 22 February 2024</p>
+                <p><strong>Location:</strong> Urban Primary Health Center, Bangalore</p>
+                <p><strong>Services:</strong> Counseling, health tests, nutrition guidance</p>
+                <p><strong>Contact:</strong> +91 9087654321</p>
+                <a href="#" class="btn">Register Now</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Need Help?</h2>
+            <p>Contact our health support team for assistance:</p>
+            <p><strong>Email:</strong> health-support@vistara.org</p>
+            <p><strong>Helpline:</strong> +91 123-456-7890</p>
+            <p>Available Monday-Saturday, 9 AM - 6 PM</p>
+            <a href="#" class="btn">Contact Support</a>
+        </div>
+    </div>
+
+    <script>
+        const stateDistricts = {
+            "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur", "Tirupati"],
+            "Arunachal Pradesh": ["Itanagar", "Tawang", "Pasighat"],
+            "Assam": ["Guwahati", "Dibrugarh", "Jorhat", "Silchar"],
+            "Bihar": ["Patna", "Gaya", "Muzaffarpur", "Bhagalpur"],
+            "Chhattisgarh": ["Raipur", "Bilaspur", "Durg", "Bhilai"],
+            "Goa": ["Panaji", "Margao", "Vasco da Gama"],
+            "Gujarat": ["Ahmedabad", "Surat", "Vadodara", "Rajkot"],
+            "Haryana": ["Gurugram", "Faridabad", "Panipat", "Ambala"],
+            "Himachal Pradesh": ["Shimla", "Dharamshala", "Kullu"],
+            "Jharkhand": ["Ranchi", "Jamshedpur", "Dhanbad"],
+            "Karnataka": ["Bangalore", "Mysore", "Hubli", "Mangalore"],
+            "Kerala": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Thrissur"],
+            "Madhya Pradesh": ["Bhopal", "Indore", "Jabalpur", "Gwalior"],
+            "Maharashtra": ["Mumbai", "Pune", "Nagpur", "Nashik"],
+            "Manipur": ["Imphal", "Thoubal", "Churachandpur"],
+            "Meghalaya": ["Shillong", "Tura", "Nongstoin"],
+            "Mizoram": ["Aizawl", "Lunglei", "Saiha"],
+            "Nagaland": ["Kohima", "Dimapur"],
+            "Odisha": ["Bhubaneswar", "Cuttack", "Rourkela", "Berhampur"],
+            "Punjab": ["Ludhiana", "Amritsar", "Jalandhar", "Patiala"],
+            "Rajasthan": ["Jaipur", "Jodhpur", "Udaipur", "Ajmer"],
+            "Sikkim": ["Gangtok", "Namchi"],
+            "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai", "Tiruchirappalli"],
+            "Telangana": ["Hyderabad", "Warangal", "Nizamabad"],
+            "Tripura": ["Agartala", "Udaipur"],
+            "Uttar Pradesh": ["Lucknow", "Kanpur", "Varanasi", "Agra"],
+            "Uttarakhand": ["Dehradun", "Haridwar", "Rishikesh"],
+            "West Bengal": ["Kolkata", "Howrah", "Durgapur", "Asansol"]
+        };
+
+        const stateSelect = document.getElementById('state');
+        const districtSelect = document.getElementById('district');
+
+        // Dynamic district population
+        stateSelect.addEventListener('change', () => {
+            districtSelect.disabled = false;
+            districtSelect.innerHTML = '<option value="">Select District</option>';
+            
+            const selectedState = stateSelect.value;
+            stateDistricts[selectedState].forEach(district => {
+                const option = document.createElement('option');
+                option.value = district;
+                option.textContent = district;
+                districtSelect.appendChild(option);
+            });
+        });
+    </script>
+</body>
+</html>
