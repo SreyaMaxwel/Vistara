@@ -4,10 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Growth</title>
-    <link rel="stylesheet" href="job.css">
+    <style>
+        /* Global Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFF0F5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #FF69B4;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #FFD700;
+        }
+
+        /* Sections */
+        section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        section h2 {
+            color: #FF1493;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            margin-bottom: 15px;
+        }
+
+        section button {
+            background-color: #FF1493;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        section button:hover {
+            background-color: #C71585;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #FF69B4;
+            color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-
     <header>
         <h1>Empowering Business Growth</h1>
         <nav>
@@ -19,7 +121,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <section id="partners">
             <h2>Find Your Business Partners</h2>
             <p>Connect with entrepreneurs who share your vision and ideas!</p>
@@ -42,6 +144,5 @@
     <footer>
         <p>&copy; 2025 Business Growth. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
