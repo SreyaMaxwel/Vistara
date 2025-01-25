@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vistara - Find a Sponsor</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFF0F5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #FF69B4;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn {
+            display: inline-block;
+            background-color: #FF1493;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 10px 0;
+        }
+        .btn:hover {
+            background-color: #C71585;
+        }
+        .sponsor-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .sponsor-form input,
+        .sponsor-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #FF69B4;
+            border-radius: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Find a Sponsor</h1>
+        </header>
+
+        <div class="section">
+            <h2>Scholarship Opportunities</h2>
+            <p>Discover scholarship programs supporting women's education:</p>
+            <ul>
+                <li>Government Scholarship Programs</li>
+                <li>NGO-based Scholarships</li>
+                <li>Corporate Social Responsibility Scholarships</li>
+                <li>Merit-based Scholarships</li>
+            </ul>
+            <a href="#" class="btn">Explore Scholarships</a>
+        </div>
+
+        <div class="section">
+            <h2>Connect with Potential Sponsors</h2>
+            <form class="sponsor-form">
+                <h3>Create Your Sponsorship Profile</h3>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number">
+                <input type="text" placeholder="Educational Goal">
+                <textarea placeholder="Brief Background & Aspirations" rows="4" required></textarea>
+                <input type="file" placeholder="Upload Supporting Documents">
+                <button type="submit" class="btn">Submit Profile</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Vistara Sponsor Network</h2>
+            <p>Our platform connects aspiring women with potential sponsors:</p>
+            <ul>
+                <li>Verified Sponsor Profiles</li>
+                <li>Secure Matching Process</li>
+                <li>Transparent Communication Channels</li>
+                <li>Follow-up Support</li>
+            </ul>
+            <a href="#" class="btn">Browse Sponsors</a>
+        </div>
+
+        <div class="section">
+            <h2>Need Support?</h2>
+            <p>Contact our sponsorship support team:</p>
+            <p>Email: sponsor-support@vistara.org</p>
+            <p>Helpline: +91 123-456-7890</p>
+            <a href="#" class="btn">Contact Us</a>
+        </div>
+    </div>
+</body>
+</html>
