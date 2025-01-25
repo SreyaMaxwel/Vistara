@@ -3,146 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Growth</title>
+    <title>Business Hub</title>
     <style>
-        /* Global Reset */
-        * {
-            box-sizing: border-box;
+        /* General Reset */
+        body, h1, h2, h3, p {
             margin: 0;
             padding: 0;
+            font-family: 'Arial', sans-serif;
         }
 
-        /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #FFF0F5;
-            color: #333;
+            background-color: #f9f9f9;
             line-height: 1.6;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Header */
+        /* Header Section */
         header {
-            background-color: #FF69B4;
+            background: linear-gradient(to right, #ff5fdc, #FF69B4);
             color: white;
             text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            padding: 60px 20px;
+        }
+
+        header .container {
+            max-width: 960px;
+            margin: auto;
         }
 
         header h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
         }
 
-        header nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        header p {
+            font-size: 1.2rem;
         }
 
-        header nav ul li {
-            display: inline;
-        }
-
-        header nav ul li a {
-            color: white;
+        header .btn {
+            background: white;
+            color: #FF69B4;
+            padding: 10px 20px;
             text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
-            transition: color 0.3s ease;
         }
 
-        header nav ul li a:hover {
-            color: #FFD700;
+        header .btn:hover {
+            background: #FF69B4;
+            color: white;
         }
 
-        /* Sections */
-        section {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
+        /* Features Section */
+        #features {
+            padding: 40px 20px;
+            text-align: center;
+            background: #fff;
+        }
+
+        #features h2 {
             margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .features-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            padding: 40px 20px;
+            background: #f9f9f9;
             text-align: center;
         }
 
-        section h2 {
-            color: #FF1493;
-            margin-bottom: 15px;
+        #testimonials h2 {
+            margin-bottom: 20px;
         }
 
-        section p {
-            margin-bottom: 15px;
+        .testimonial {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px auto;
+            width: 300px;
         }
 
-        section button {
-            background-color: #FF1493;
+        .testimonial h4 {
+            margin-top: 10px;
+            font-style: italic;
+            color: #777;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 40px 20px;
+            text-align: center;
+            background: #fff;
+        }
+
+        #contact form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #contact button {
+            background:#FF69B4;
             color: white;
-            padding: 10px 15px;
             border: none;
+            padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            font-size: 1rem;
         }
 
-        section button:hover {
-            background-color: #C71585;
+        #contact button:hover {
+            background: #fe7bc1;
         }
 
         /* Footer */
         footer {
+            background: #333;
+            color: white;
             text-align: center;
             padding: 10px;
-            background-color: #FF69B4;
-            color: white;
-            border-radius: 10px;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Empowering Business Growth</h1>
-        <nav>
-            <ul>
-                <li><a href="#partners">Find Partners</a></li>
-                <li><a href="#products">Promote Products</a></li>
-                <li><a href="#promotions">Business Promotions</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Welcome to Business Hub</h1>
+            <p>Empowering women to grow, connect, and succeed.</p><br><br>
+            <a href="#features" class="btn">Get Started</a>
+        </div>
     </header>
 
-    <main class="container">
-        <section id="partners">
-            <h2>Find Your Business Partners</h2>
-            <p>Connect with entrepreneurs who share your vision and ideas!</p>
-            <button>Start Partner Search</button>
-        </section>
+    <section id="features">
+        <h2>What We Offer</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3>Find Partners</h3>
+                <p>Connect with individuals who share your vision and grow together.</p>
+            </div>
+            <div class="feature">
+                <h3>Promote Products</h3>
+                <p>Showcase your products to a global audience and boost your sales.</p>
+            </div>
+            <div class="feature">
+                <h3>Get Noticed</h3>
+                <p>Participate in promotional events to get your business the attention it deserves.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="products">
-            <h2>Promote Your Products</h2>
-            <p>Showcase your unique products to a wider audience.</p>
-            <button>Showcase Now</button>
-        </section>
+    <section id="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            <p>"This platform helped me connect with amazing partners!"</p>
+            <h4>- Aisha Khan</h4>
+        </div>
+        <div class="testimonial">
+            <p>"My product sales increased by 300% after joining!"</p>
+            <h4>- Meera Das</h4>
+        </div>
+        <div class="testimonial">
+            <p>"I found the perfect collaborator for my new project."</p>
+            <h4>- Priya Sharma</h4>
+        </div>
+    </section>
 
-        <section id="promotions">
-            <h2>Business Promotions</h2>
-            <p>Get noticed with special promotions and deals!</p>
-            <button>Get Promoted</button>
-        </section>
-    </main>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Business Growth. All rights reserved.</p>
+        <p>&copy; 2025 Business Hub. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
