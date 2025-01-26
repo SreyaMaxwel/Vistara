@@ -5,11 +5,14 @@ Team Members
 Member 1: [Sreya Maxwel] - [TKMCE]
 Member 2: [Sivanandhana] - [TKMCE]
 Member 3: [Sredha Gopan] - [TKMCE]
-Hosted Project Link
+
+[Hosted Project Link]
+
 https://sreyamaxwel.github.io/Vistara/welcome.html
 
-Project Description
-[Vistara is a platform dedicated to uplifting and empowering women 
+[Project Description]
+
+Vistara is a platform dedicated to uplifting and empowering women 
 in underprivileged communities. It provides access to diverse job
  opportunities, skill enhancement programs, and valuable resources 
  to support personal and professional growth. Vistara keeps women 
@@ -21,17 +24,18 @@ in underprivileged communities. It provides access to diverse job
    fosters community building and collaboration, creating a space for 
    women to thrive together.
 
-]
 
-The Problem statement
-[Women in underprivileged communities face limited access to education,
+
+[The Problem statement]
+
+Women in underprivileged communities face limited access to education,
  jobs, healthcare, and awareness of their rights, hindering their personal 
  and professional growth. This lack of support perpetuates poverty and restricts 
  community upliftment
-]
 
-The Solution
-[Solution is our Vistara!Vistara provides a holistic platform 
+[The Solution]
+
+Solution is our Vistara!Vistara provides a holistic platform 
 for underprivileged women to access job opportunities, 
 enhance skills, and grow their businesses. It raises
  awareness about health, rights, and education while
@@ -39,7 +43,6 @@ enhance skills, and grow their businesses. It raises
   connecting like-minded individuals and fostering 
   collaboration, Vistara empowers women to achieve 
   independence and uplift their communities.
-]
 
 Technical Details
 Technologies/Components Used
@@ -87,17 +90,15 @@ https://drive.google.com/file/d/1-oRycQTUrrVztV4LmIhjc4VT7FJaKNzu/view?usp=drive
 
 
 Team Contributions
-[Sreya Maxwel]: [ Responsible for the main structure of the HTML, including the header and body.
-Tasks:
-Create the basic HTML document structure.
-Set up the <head> section, including the <meta> tags, title, and linking to the Google Fonts.
+[Sreya Maxwel]: 
+Conducted research to identify the challenges faced by girls and curated resources to empower them.
+Developed and refined the website content to ensure it was impactful, relevant, and engaging for the target audience.
 
-Completed HTML layout and structure.]
-[Sivanandhana]: [ Responsible for styling the page and ensuring a visually appealing design.
-Tasks:
-Apply general styling to the <body>, including setting the background image, font family, and background settings.
-]
-[Sredha Gopan]: [Responsible for handling the image used as the background.
-Tasks:
-Ensure the image (vist ht.png) is present and correctly linked in the project directory.
-Optimize the image for better page load time and responsiveness (e.g., resizing or compressing the image).]
+[Sivanandhana]:  
+Designed the website’s layout and overall aesthetics with a focus on user experience (UX) and visual appeal.
+Created a clean and intuitive design that aligned with the project’s goals and ensured accessibility for all users.
+
+
+[Sredha Gopan]: 
+Translated the design into a fully functional website using HTML, CSS, and JavaScript.
+Focused on responsive design to ensure compatibility across devices and implemented interactive features to enhance the user experience.
