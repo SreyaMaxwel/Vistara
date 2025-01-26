@@ -71,7 +71,6 @@ enhance skills, and grow their businesses. It raises
 ## Implementation
 
 ### For Software:
+HTML,CSS
 
 #### Installation
-```bash
-[commands]

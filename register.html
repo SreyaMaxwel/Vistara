@@ -84,7 +84,7 @@
         p a:hover {
             color: #823554;
         }
-        </style>
+    </style>
 </head>
 <body>
     <div class="container">
@@ -97,30 +97,12 @@
     </div>
 
     <script>
-        // Sample list of users (in a real application, this would be in a database)
-        const usersList = [
-            { username: 'user1', password: 'password1' },
-            { username: 'user2', password: 'password2' },
-            // Add more users as needed
-        ];
-
         document.getElementById('register-form').addEventListener('submit', function(event) {
             event.preventDefault();
-
-            const newUsername = document.getElementById('new-username').value;
-            const newPassword = document.getElementById('new-password').value;
-
-            // Check if username already exists in the usersList
-            const userExists = usersList.some(user => user.username === newUsername);
-
-            if (userExists) {
-                alert('Username already exists. Please choose another one.');
-            } else {
-                // Add the new user to the list
-                usersList.push({ username: newUsername, password: newPassword });
-                alert('Registration successful! You can now login.');
-                window.location.href = 'login.html'; // Redirect to login page after successful registration
-            }
+            
+            // No validation needed for registration; anyone can register with any username and password
+            alert('Registration successful! You can now login.');
+            window.location.href = 'login.html'; // Redirect to login page after successful registration
         });
     </script>
 </body>
