@@ -89,12 +89,39 @@
 <body>
     <div class="container">
         <h1>Login</h1>
-        <form action="opportunities.html">
-            <input type="text" placeholder="Enter your username" required>
-            <input type="password" placeholder="Enter your password" required>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Enter your username" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
             <button type="submit">Login</button>
         </form>
         <p>Don't have an account? <a href="register.html">Register here</a></p>
     </div>
+
+    <script>
+        // Sample list of users (can be stored in localStorage for persistence)
+        const usersList = [
+            { username: 'Sreya', password: '123' },
+            { username: 'Siva', password: '123' },
+            {username: 'Sredha', password: '123'}
+            // Add more users as needed
+        ];
+
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const user = usersList.find(user => user.username === username && user.password === password);
+
+            if (user) {
+                alert('Login successful!');
+                window.location.href = 'opportunities.html'; // Redirect to another page after successful login
+            } else {
+                alert('Invalid credentials. Please register if you don\'t have an account.');
+                window.location.href = 'register.html'; // Redirect to registration page
+            }
+        });
+    </script>
 </body>
 </html>

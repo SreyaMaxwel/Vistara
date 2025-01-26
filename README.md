@@ -13,17 +13,36 @@
 ---
 
 ## Project Description
-[2-3 lines about what your project does]
+Vistara is a platform dedicated to uplifting and empowering women 
+in underprivileged communities. It provides access to diverse job
+ opportunities, skill enhancement programs, and valuable resources 
+ to support personal and professional growth. Vistara keeps women 
+ informed about upcoming health camps, raises awareness about their
+  rights, offers sex education, and provides crucial support services 
+  like counseling and mentorship.Through this initiative, women can 
+  connect with like-minded individuals, build and grow their businesses,
+   and support one another in achieving success. At its core, Vistara 
+   fosters community building and collaboration, creating a space for 
+   women to thrive together.
 
----
 
 ## The Problem Statement
-[What ridiculous problem are you solving?]
+Women in underprivileged communities face limited access to education,
+ jobs, healthcare, and awareness of their rights, hindering their personal 
+ and professional growth. This lack of support perpetuates poverty and restricts 
+ community upliftment
 
 ---
 
 ## The Solution
-[How are you solving it? Keep it fun!]
+Solution is our Vistara!Vistara provides a holistic platform 
+for underprivileged women to access job opportunities, 
+enhance skills, and grow their businesses. It raises
+ awareness about health, rights, and education while
+  offering counseling and community support. By 
+  connecting like-minded individuals and fostering 
+  collaboration, Vistara empowers women to achieve 
+  independence and uplift their communities.
 
 ---
 
@@ -33,13 +52,11 @@
 
 #### For Software:
 - **Languages used**:
-  - [Languages used]
+  -HTML,CSS,JavaScript
 - **Frameworks used**:
-  - [Frameworks used]
-- **Libraries used**:
-  - [Libraries used]
+  - Bootstrap
 - **Tools used**:
-  - [Tools used]
+  - VS Code,Github
 
 #### For Hardware:
 - **List main components**:
