@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Connect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #FF69B4;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section h2 {
+            font-size: 1.8rem;
+            color: #FF69B4;
+            margin-bottom: 15px;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        form input, form select, form button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        form button {
+            background-color: #FF69B4;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #FF69B4;
+        }
+
+        .results {
+            margin-top: 20px;
+        }
+
+        .results h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .profile-card {
+            background: #f4f4f4;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-card h4 {
+            color: #FF69B4;
+            margin-bottom: 5px;
+        }
+
+        .profile-card p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Community Connect</h1>
+            <p>Find and connect with like-minded people who share your passions!</p>
+        </header>
+
+        <section class="intro">
+            <p>Join our growing community of enthusiastic individuals who are eager to share ideas, collaborate, and build meaningful connections. Whether you're into technology, arts, fitness, or anything in between, there's a group for you!</p>
+        </section>
+
+        <section class="form-section">
+            <h2>Find Your Tribe</h2>
+            <form id="filter-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <select id="interest">
+                    <option value="">Select Interest</option>
+                    <option value="technology">Technology</option>
+                    <option value="art">Art</option>
+                    <option value="fitness">Fitness</option>
+                    <option value="music">Music</option>
+                    <option value="business">Business</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="results" id="results">
+            <h3>People You May Connect With:</h3>
+            <!-- Profile cards will appear here dynamically -->
+        </section>
+    </div>
+
+    <script>
+        const form = document.getElementById('filter-form');
+        const resultsSection = document.getElementById('results');
+
+        const profiles = [
+            { name: 'Aditi', interest: 'technology', description: 'Passionate about AI and robotics.', phone: '9876543210', email: 'aditi@example.com' },
+            { name: 'Ravi', interest: 'art', description: 'Loves painting and digital design.', phone: '9876543211', email: 'ravi@example.com' },
+            { name: 'Meera', interest: 'fitness', description: 'Certified yoga instructor.', phone: '9876543212', email: 'meera@example.com' },
+            { name: 'Ajay', interest: 'music', description: 'Plays guitar and loves composing.', phone: '9876543213', email: 'ajay@example.com' },
+            { name: 'Sonia', interest: 'business', description: 'Entrepreneur in e-commerce.', phone: '9876543214', email: 'sonia@example.com' },
+        ];
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const interest = document.getElementById('interest').value;
+            resultsSection.innerHTML = '<h3>People You May Connect With:</h3>';
+
+            const filteredProfiles = profiles.filter(profile => interest === '' || profile.interest === interest);
+
+            if (filteredProfiles.length > 0) {
+                filteredProfiles.forEach(profile => {
+                    const card = document.createElement('div');
+                    card.classList.add('profile-card');
+                    card.innerHTML = `
+                        <h4>${profile.name}</h4>
+                        <p>${profile.description}</p>
+                        <p><strong>Phone:</strong> ${profile.phone}</p>
+                        <p><strong>Email:</strong> <a href="mailto:${profile.email}">${profile.email}</a></p>
+                    `;
+                    resultsSection.appendChild(card);
+                });
+            } else {
+                resultsSection.innerHTML += '<p>No matching profiles found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
