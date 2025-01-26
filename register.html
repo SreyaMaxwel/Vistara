@@ -9,7 +9,8 @@
       body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #fde2e4, #f9c5d1);
+            background: url('vist%20ht.png') no-repeat center center fixed;
+            background-size: cover;
             font-family: 'Quicksand', sans-serif;
             display: flex;
             justify-content: center;
@@ -21,7 +22,7 @@
             text-align: center;
             width: 100%;
             max-width: 400px;
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
             padding: 30px;
             border-radius: 16px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
@@ -29,9 +30,9 @@
 
         h1 {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem;
-            color: #ff66b2;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            color: #823554;
+            margin-bottom: 20px;
         }
 
         input {
@@ -41,10 +42,17 @@
             border: 1px solid #ffb3c6;
             border-radius: 8px;
             font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #ff66b2;
+            box-shadow: 0 4px 15px rgba(255, 102, 178, 0.3);
         }
 
         button {
-            background-color: #ff66b2;
+            background-color: #823554;
             color: white;
             border: none;
             padding: 12px;
@@ -52,28 +60,31 @@
             width: 100%;
             font-size: 18px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.2s;
         }
 
         button:hover {
-            background-color: #ff3385;
+            background-color: #ff66b2;
+            transform: scale(1.05);
         }
 
         p {
-            margin-top: 20px;
-            font-size: 14px;
+            font-size: 16px;
             color: #666;
+            margin-top: 20px;
         }
 
-        a {
-            color: #ff3385;
+        p a {
+            color: #ff66b2;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }  
-    </style>
+        p a:hover {
+            color: #823554;
+        }
+        </style>
 </head>
 <body>
     <div class="container">
