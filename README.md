@@ -6,7 +6,7 @@ Member 1: [Sreya Maxwel] - [TKMCE]
 Member 2: [Sivanandhana] - [TKMCE]
 Member 3: [Sredha Gopan] - [TKMCE]
 Hosted Project Link
-[mention your project hosted project link here]
+https://sreyamaxwel.github.io/Vistara/welcome.html
 
 Project Description
 [Vistara is a platform dedicated to uplifting and empowering women 
